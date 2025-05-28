@@ -1,61 +1,39 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![Screenshot (194)](https://github.com/user-attachments/assets/1a7208f6-c7e7-41e7-973c-bd699f062d82)
+![Screenshot (195)](https://github.com/user-attachments/assets/4732903f-336b-41ae-90f3-c9ae90fe0806)
+![Screenshot (196)](https://github.com/user-attachments/assets/e41adc2a-7283-453e-87c2-b3d0586ea4d7)
+![Screenshot (197)](https://github.com/user-attachments/assets/352acea1-b10c-4872-bab8-e8d3c79992bc)
+![Screenshot (198)](https://github.com/user-attachments/assets/69323f4a-66e4-42fe-9779-e27745f66ab4)
+![Screenshot (200)](https://github.com/user-attachments/assets/7c26e13c-c8c8-4ec0-a7a8-a3e0aab03fcb)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Step 1: Create New Laravel Project <br> 
+bash:<br>
+   composer create-project laravel/laravel item-manager-new<br>
+   cd item-manager-new<br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Step 2: Install Jetstream Authentication <br>
+bash:<br>
+   composer require laravel/jetstream  <br>
+   php artisan jetstream:install livewire <br>
+   npm install<br>
+   npm run dev<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Step 3: Configure Database<br>
+   Create MySQL database (e.g., item_manager)  <br>
+   Update .env file:<br><br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+.env<br>
+DB_CONNECTION=mysql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=item_manager<br>
+DB_USERNAME=root <br>
+DB_PASSWORD=your_password<br>
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+php artisan serve<br>
+Step 4: Run Migrations<br>
+bash<br>
+php artisan migrate<br>
+Step 5: Create Item Model & Migration<br>
+bash<br>
+php artisan make:model Item -m<br>
