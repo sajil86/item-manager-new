@@ -30,10 +30,10 @@ DB_DATABASE=item_manager<br>
 DB_USERNAME=root <br>
 DB_PASSWORD=your_password<br>
 
-php artisan serve<br>
 Step 4: Run Migrations<br>
 bash<br>
 php artisan migrate<br>
 Step 5: Create Item Model & Migration<br>
 bash<br>
 php artisan make:model Item -m<br>
+php artisan serve <br>
